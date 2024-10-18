@@ -1,1 +1,2 @@
-# IRIHIProjectTemplate
+Prism Extension for Irihi.Ursa
+
