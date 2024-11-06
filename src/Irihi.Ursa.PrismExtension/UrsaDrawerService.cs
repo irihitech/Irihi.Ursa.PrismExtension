@@ -20,7 +20,7 @@ public class UrsaDrawerService(IContainerExtension container) : IUrsaDrawerServi
         Drawer.ShowCustom(v, vm, hostId, options);
     }
 
-    public Task<DialogResult> ShowModal(string viewName, object? vm, string? hostId = null,
+    public Task<Ursa.Controls.DialogResult> ShowModal(string viewName, object? vm, string? hostId = null,
         DrawerOptions? options = null)
     {
         var v = container.Resolve<Control>(UrsaDialogServiceExtension.UrsaDialogViewPrefix + viewName);

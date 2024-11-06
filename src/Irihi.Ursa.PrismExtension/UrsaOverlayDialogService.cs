@@ -19,7 +19,7 @@ public class UrsaOverlayDialogService(IContainerExtension container) : IUrsaOver
         OverlayDialog.ShowCustom(v, vm, hostId, options);
     }
 
-    public Task<DialogResult> ShowModal(string viewName, object? vm, string? hostId = null,
+    public Task<Ursa.Controls.DialogResult> ShowModal(string viewName, object? vm, string? hostId = null,
         OverlayDialogOptions? options = null)
     {
         var v = container.Resolve<Control>(UrsaDialogServiceExtension.UrsaDialogViewPrefix + viewName);

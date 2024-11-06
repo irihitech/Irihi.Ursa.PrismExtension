@@ -9,7 +9,7 @@ public interface IUrsaOverlayDialogService
 
     public void ShowCustom(string viewName, object? vm, string? hostId = null, OverlayDialogOptions? options = null);
 
-    public Task<DialogResult> ShowModal(string viewName, object? vm, string? hostId = null,
+    public Task<Ursa.Controls.DialogResult> ShowModal(string viewName, object? vm, string? hostId = null,
         OverlayDialogOptions? options = null);
 
     public Task<TResult?> ShowCustomModal<TResult>(string viewName, object? vm, string? hostId = null,

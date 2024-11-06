@@ -4,6 +4,14 @@
         <TargetFramework>net6.0</TargetFramework>
         <LangVersion>latestmajor</LangVersion>
         <Nullable>enable</Nullable>
+        <Version>9.0.1</Version>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <PackageId>Irihi.Ursa.PrismExtension</PackageId>
+        <PackageIcon>irihi.png</PackageIcon>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
     <ItemGroup>

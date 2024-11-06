@@ -1,0 +1,25 @@
+name: Pack and Release
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Restore dependencies
+        run: dotnet restore ./src
+      - name: Build
+        run: dotnet build --no-restore ./src
+      - name: Test
+        run: dotnet test --no-build --verbosity normal ./src
+      - name: Pack
+        run: |
+          dotnet pack ./src/Irihi.Ursa.PrismExtension -o ./nugets
+      - name: Publish NuGet package
+        run: dotnet nuget push "./nugets/*.nupkg" --api-key ${{ secrets.NUGET_ORG_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
