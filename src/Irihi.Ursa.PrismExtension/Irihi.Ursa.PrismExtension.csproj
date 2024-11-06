@@ -19,4 +19,8 @@
         <PackageReference Include="Prism.Avalonia" Version="9.0.401.11110-pre"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="irihi.png" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
 </Project>
