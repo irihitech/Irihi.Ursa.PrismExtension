@@ -13,11 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.1
       - name: Restore dependencies
-        run: dotnet restore ./src
+        run: dotnet restore ./src/Irihi.Ursa.PrismExtension
       - name: Build
-        run: dotnet build --no-restore ./src
+        run: dotnet build --no-restore ./src/Irihi.Ursa.PrismExtension
       - name: Test
-        run: dotnet test --no-build --verbosity normal ./src
+        run: dotnet test --no-build --verbosity normal ./src/Irihi.Ursa.PrismExtension
       - name: Pack
         run: |
           dotnet pack ./src/Irihi.Ursa.PrismExtension -o ./nugets
